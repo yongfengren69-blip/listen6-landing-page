@@ -72,10 +72,30 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="section-shell data-grid" aria-label="Market data placeholders">
-          <article className="data-card"><span>01</span><strong>[MARKET DATA]</strong><p>Global demand for connection and companionship.</p></article>
-          <article className="data-card accent-card"><span>02</span><strong>[AI COMPANION DATA]</strong><p>Proof that people actively seek companionship.</p></article>
-          <article className="data-card"><span>03</span><strong>[PAID LISTENING EXAMPLE]</strong><p>Real examples of people paying to be heard.</p></article>
+        <div className="section-shell data-grid" aria-label="Market evidence">
+          <article className="data-card">
+            <span>01 — THE NEED IS REAL</span>
+            <strong className="data-stat">24%</strong>
+            <h3>of people worldwide report feeling fairly or very lonely.</h3>
+            <p>Millions of people are looking for more connection, conversation, and someone who will genuinely listen.</p>
+            <cite>Source: Gallup — Global State of Social Connections</cite>
+          </article>
+          <article className="data-card accent-card">
+            <span>02 — PEOPLE ALREADY PAY FOR CONNECTION</span>
+            <div className="data-stat-pair">
+              <strong className="data-stat">220M <small>Downloads</small></strong>
+              <strong className="data-stat">$221M <small>Consumer Spending</small></strong>
+            </div>
+            <p>AI companion apps have already attracted hundreds of millions of downloads and significant consumer spending worldwide. People are already paying for conversation, attention and companionship.</p>
+            <cite>Source: Appfigures, reported by TechCrunch — July 2025</cite>
+          </article>
+          <article className="data-card">
+            <span>03 — REAL PEOPLE ALREADY SELL LISTENING</span>
+            <strong className="data-stat">$50 <small>/ Hour</small></strong>
+            <h3>Empathetic listening is already being sold as a paid service.</h3>
+            <p>One current Upwork service offers one hour of empathetic listening for $50. Dedicated listening platforms also allow users to pay listeners by the minute.</p>
+            <cite>Source: Upwork — current service listing</cite>
+          </article>
         </div>
         <p className="section-conclusion section-shell">The demand already exists.</p>
       </section>
