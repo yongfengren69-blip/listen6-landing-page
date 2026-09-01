@@ -93,7 +93,7 @@ export default function Home() {
             <span>03 — REAL PEOPLE ALREADY SELL LISTENING</span>
             <strong className="data-stat">$100 <small>/ Hour</small></strong>
             <h3>Empathetic listening is already being sold as a paid service.</h3>
-            <p>One current Upwork service offers one hour of empathetic listening for $50. Dedicated listening platforms also allow users to pay listeners by the minute.</p>
+            <p>One current Upwork service offers one hour of empathetic listening for $100. Dedicated listening platforms also allow users to pay listeners by the minute.</p>
             <cite>Source: Upwork — current service listing</cite>
           </article>
         </div>
