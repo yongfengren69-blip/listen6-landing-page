@@ -14,6 +14,7 @@ const questions = [
       "Why would someone pay another person just to listen? What are they really paying for? And where does the listener fit into all of this?",
     paragraphs: [
       "Paid listening is more than simply staying quiet while someone talks. People may be looking for a private, judgment-free space to talk about loneliness, relationships, stress, work, family, or everyday life.",
+      "Paid listening turns that need into a service: a listener offers their time, attention, and conversation skills to people who are willing to pay for that experience.",
       "As a listener, your role is to help create that space — to listen carefully, ask the right questions, respond with empathy, and help the conversation continue naturally.",
     ],
     closing:
@@ -53,7 +54,7 @@ const questions = [
       "And what should you do first, second, and third?",
     ],
     closing:
-      "You won’t be left to figure that out on your own. The guide gives you a clear beginner starting process — from preparation to setting yourself up and taking your first real step into paid listening. By the end, you won’t just understand paid listening. You’ll know what to do next.",
+      "You won’t be left to figure that out on your own. You’ll know what to prepare, where to begin, how to set yourself up, and what to do next — in order. By the end, you won’t just understand paid listening. You’ll know what to do next.",
   },
 ];
 
@@ -76,12 +77,12 @@ export default function Home() {
             <p className="market-stat">$27.5<span>B</span></p>
             <p className="market-growth">33.8%<br /><span>ANNUAL GROWTH</span></p>
           </div>
-          <h1>People are already paying for new ways to feel heard, supported, and connected.</h1>
+          <h1>People are turning one of the most ordinary human skills — listening — into a paid service.</h1>
           <p className="market-copy">
             The social connection services market is projected to reach $27.5 billion by 2036 — growing at 33.8% a year.
           </p>
           <p className="market-copy market-copy-secondary">
-            Paid listening is one way people are turning a simple human skill — listening — into a real service.
+            People are paying for a private, judgment-free space where they can talk, feel heard, and connect with another person.
           </p>
           <a className="market-next" href="#guide">
             So how does paid listening actually work — and how can a complete beginner get started? <span aria-hidden="true">↓</span>
@@ -120,8 +121,8 @@ export default function Home() {
         </div>
 
         <div className="section-shell guide-summary">
-          <strong>Everything You Need to Understand It, Learn It, and Start.</strong>
-          <p>No complicated theory. No need to piece together random information from dozens of places. Just a clear beginner guide to understanding paid listening, learning the skills, and knowing how to get started.</p>
+          <strong>You Don’t Have to Figure All of This Out by Yourself.</strong>
+          <p>We’ve put the entire beginner path in one place — how paid listening works, how to handle real conversations, and how to take your first step.</p>
         </div>
       </section>
 
@@ -130,14 +131,14 @@ export default function Home() {
           <p className="eyebrow">LAUNCH PRE-ORDER</p>
           <h2>The Paid Listening<br />Starter Guide.</h2>
           <p className="purchase-copy">
-            A complete beginner guide to understanding paid listening, learning the skills, and knowing how to actually get started.
+            A practical beginner guide designed to take you from “I just discovered paid listening” to “I know what to do next.”
           </p>
 
           <ul className="purchase-includes" aria-label="What the guide includes">
-            <li>Understand how paid listening works</li>
-            <li>Learn how to handle real listening conversations</li>
-            <li>Follow a clear beginner starting process</li>
-            <li>Practical examples, guidance, and tools you can use</li>
+            <li>A clear explanation of how paid listening works</li>
+            <li>Real conversation examples and response guidance</li>
+            <li>Step-by-step beginner starting instructions</li>
+            <li>Practical checklists and tools to help you take action</li>
           </ul>
 
           <div className="price-row" aria-label="Price">
@@ -146,9 +147,8 @@ export default function Home() {
           </div>
 
           <a className="buy-button" href={purchaseUrl}>Pre-Order Now — $39.90</a>
-          <p className="delivery-note">
-            This is a pre-order. The complete digital guide will be delivered to your email on the announced delivery date.
-          </p>
+          {/* TODO: Before publishing, add the confirmed delivery date here:
+              This is a pre-order. Your complete digital guide will be delivered by email on [actual date]. */}
         </div>
 
         <footer className="site-footer section-shell">

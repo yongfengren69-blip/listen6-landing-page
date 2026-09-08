@@ -54,7 +54,7 @@ h1 { max-width: 810px; margin: 42px 0 0; font-size: clamp(42px, 8.5vw, 86px); fo
 .question-prompts { display: grid; gap: 5px; margin: 18px 0; padding: 0; color: var(--ink); font-weight: 700; line-height: 1.35; list-style: none; }
 .question-prompts li { position: relative; padding-left: 18px; }
 .question-prompts li::before { content: "—"; position: absolute; left: 0; color: #9d8512; }
-.question-closing { color: var(--ink); }
+.question-closing { color: var(--ink); font-weight: 700; }
 .guide-summary { max-width: 790px; padding: 54px 0 80px; }
 .guide-summary strong { display: block; font-size: clamp(27px, 5.8vw, 52px); font-weight: 900; letter-spacing: -.065em; line-height: .94; }
 .guide-summary p { max-width: 620px; margin: 18px 0 0; color: #5d5a54; font-size: 16px; line-height: 1.5; }
@@ -70,7 +70,6 @@ h1 { max-width: 810px; margin: 42px 0 0; font-size: clamp(42px, 8.5vw, 86px); fo
 .price-row strong { color: var(--signal); font-size: clamp(48px, 11vw, 80px); font-weight: 900; letter-spacing: -.09em; line-height: .8; }
 .buy-button { display: flex; align-items: center; justify-content: center; min-height: 66px; margin-top: 22px; padding: 18px; background: var(--signal); color: var(--ink); font-size: 16px; font-weight: 900; letter-spacing: -.025em; text-align: center; text-decoration: none; transition: transform .2s ease, box-shadow .2s ease; }
 .buy-button:hover { transform: translateY(-2px); box-shadow: 0 8px 0 rgba(245,241,232,.28); }
-.delivery-note { max-width: 500px; margin: 16px 0 0; color: var(--muted); font-size: 12px; line-height: 1.45; }
 .site-footer { display: flex; flex-direction: column; align-items: flex-start; gap: 26px; margin-top: 96px; padding-top: 22px; border-top: 1px solid var(--line); }
 .site-footer p { max-width: 320px; margin: 0; color: #77736b; font-size: 10px; line-height: 1.45; }
 @media (min-width: 700px) {
