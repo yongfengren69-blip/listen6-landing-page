@@ -4,27 +4,56 @@ import { purchaseUrl } from "./config";
 export const metadata: Metadata = {
   title: "The Paid Listening Starter Guide | Listen6",
   description:
-    "A short starter guide to understand, learn, and begin a paid listening service.",
+    "A beginner guide to understanding paid listening, learning the skills, and knowing how to get started.",
 };
 
 const questions = [
   {
-    question: "How does this business actually work?",
-    answer: "THE ROADMAP",
-    description:
-      "Understand how paid listening works and see the complete path from starting at zero to building your own service.",
+    question: "How Does Paid Listening Actually Work?",
+    intro:
+      "Why would someone pay another person just to listen? What are they really paying for? And where does the listener fit into all of this?",
+    paragraphs: [
+      "Paid listening is more than simply staying quiet while someone talks. People may be looking for a private, judgment-free space to talk about loneliness, relationships, stress, work, family, or everyday life.",
+      "As a listener, your role is to help create that space — to listen carefully, ask the right questions, respond with empathy, and help the conversation continue naturally.",
+    ],
+    closing:
+      "The guide shows you how the whole process fits together, from understanding the service to taking your first steps as a beginner.",
   },
   {
-    question: "What if I don’t know how to do it?",
-    answer: "THE SKILLS",
-    description:
-      "Learn the core skills behind real paid conversations: how to listen, ask, respond, show empathy, and handle a real exchange.",
+    question: "But What Would I Actually Say?",
+    intro:
+      "Someone starts telling you about their marriage, loneliness, stress, family problems, or something they have never felt comfortable saying out loud.",
+    prompts: [
+      "What do you say next?",
+      "How do you help them keep talking?",
+      "What questions should you ask?",
+      "What if they suddenly go quiet?",
+      "What if they become emotional?",
+      "What if you simply have no idea what to say?",
+    ],
+    paragraphs: [
+      "These are learnable skills.",
+      "The guide teaches you how to listen actively, ask better questions, respond with empathy, handle silence, keep a conversation moving naturally, and know where your boundaries should be.",
+    ],
+    closing:
+      "You’ll also see practical examples of what to say, what not to say, and how a good listening conversation actually feels.",
   },
   {
-    question: "How do I actually get started?",
-    answer: "THE STARTING METHOD",
-    description:
-      "Get a clear, practical starting method: what to prepare, what to do next, and how to take the first step.",
+    question: "Okay… So How Do I Actually Start?",
+    intro:
+      "Understanding paid listening is one thing. Actually starting is another.",
+    paragraphs: [
+      "Once you know how the service works and how to handle a real listening conversation, you still need to know what to do next.",
+    ],
+    prompts: [
+      "What should you prepare?",
+      "Where can a beginner start?",
+      "How should you present yourself?",
+      "What do you need before offering your first listening service?",
+      "And what should you do first, second, and third?",
+    ],
+    closing:
+      "You won’t be left to figure that out on your own. The guide gives you a clear beginner starting process — from preparation to setting yourself up and taking your first real step into paid listening. By the end, you won’t just understand paid listening. You’ll know what to do next.",
   },
 ];
 
@@ -42,15 +71,20 @@ export default function Home() {
         </nav>
 
         <div className="market-content section-shell">
-          <p className="eyebrow">A GROWING HUMAN-NEED MARKET</p>
-          <p className="market-stat">$27.5<span>B</span></p>
-          <h1>A market built around one thing people still need.</h1>
+          <p className="eyebrow">THE SOCIAL CONNECTION SERVICES MARKET</p>
+          <div className="market-stat-row">
+            <p className="market-stat">$27.5<span>B</span></p>
+            <p className="market-growth">33.8%<br /><span>ANNUAL GROWTH</span></p>
+          </div>
+          <h1>People are already paying for new ways to feel heard, supported, and connected.</h1>
           <p className="market-copy">
-            The social connection services market is projected to reach $27.5
-            billion by 2036, growing at 33.8% annually.
+            The social connection services market is projected to reach $27.5 billion by 2036 — growing at 33.8% a year.
+          </p>
+          <p className="market-copy market-copy-secondary">
+            Paid listening is one way people are turning a simple human skill — listening — into a real service.
           </p>
           <a className="market-next" href="#guide">
-            So how do you become part of it? <span aria-hidden="true">↓</span>
+            So how does paid listening actually work — and how can a complete beginner get started? <span aria-hidden="true">↓</span>
           </a>
         </div>
       </section>
@@ -58,25 +92,36 @@ export default function Home() {
       <section className="guide" id="guide">
         <div className="section-shell guide-heading">
           <p className="eyebrow">THE PAID LISTENING STARTER GUIDE</p>
-          <h2>Three questions.<br />Three clear answers.</h2>
+          <h2>You probably have a few questions.</h2>
         </div>
 
         <div className="section-shell question-list">
           {questions.map((item, index) => (
-            <article className="question-card" key={item.answer}>
+            <article className="question-card" key={item.question}>
               <span className="question-number">0{index + 1}</span>
               <h3>{item.question}</h3>
-              <div className="question-answer">
-                <strong>{item.answer}</strong>
-                <p>{item.description}</p>
+              <div className="question-body">
+                <p className="question-intro">{item.intro}</p>
+                {item.question === "But What Would I Actually Say?" && item.prompts && (
+                  <ul className="question-prompts">
+                    {item.prompts.map((prompt) => <li key={prompt}>{prompt}</li>)}
+                  </ul>
+                )}
+                {item.paragraphs?.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+                {item.question !== "But What Would I Actually Say?" && item.prompts && (
+                  <ul className="question-prompts">
+                    {item.prompts.map((prompt) => <li key={prompt}>{prompt}</li>)}
+                  </ul>
+                )}
+                <p className="question-closing">{item.closing}</p>
               </div>
             </article>
           ))}
         </div>
 
         <div className="section-shell guide-summary">
-          <p>THE ROADMAP + THE SKILLS + THE STARTING METHOD</p>
-          <strong>Understand it. Learn it. Start it.</strong>
+          <strong>Everything You Need to Understand It, Learn It, and Start.</strong>
+          <p>No complicated theory. No need to piece together random information from dozens of places. Just a clear beginner guide to understanding paid listening, learning the skills, and knowing how to get started.</p>
         </div>
       </section>
 
@@ -85,20 +130,24 @@ export default function Home() {
           <p className="eyebrow">LAUNCH PRE-ORDER</p>
           <h2>The Paid Listening<br />Starter Guide.</h2>
           <p className="purchase-copy">
-            A concise guide to understand the opportunity, learn the core
-            skills, and see how to take the first step.
+            A complete beginner guide to understanding paid listening, learning the skills, and knowing how to actually get started.
           </p>
+
+          <ul className="purchase-includes" aria-label="What the guide includes">
+            <li>Understand how paid listening works</li>
+            <li>Learn how to handle real listening conversations</li>
+            <li>Follow a clear beginner starting process</li>
+            <li>Practical examples, guidance, and tools you can use</li>
+          </ul>
 
           <div className="price-row" aria-label="Price">
             <span>ONE-TIME PAYMENT</span>
             <strong>$39.90</strong>
           </div>
 
-          <a className="buy-button" href={purchaseUrl}>
-            Pre-Order Now <span aria-hidden="true">→</span> $39.90
-          </a>
+          <a className="buy-button" href={purchaseUrl}>Pre-Order Now — $39.90</a>
           <p className="delivery-note">
-            Digital guide delivered to your email on <strong>[DELIVERY DATE]</strong>.
+            This is a pre-order. The complete digital guide will be delivered to your email on the announced delivery date.
           </p>
         </div>
 
