@@ -7,9 +7,9 @@ export async function generateMetadata(): Promise<Metadata> {
   const host = requestHeaders.get("host") ?? "localhost:3000";
   const protocol = requestHeaders.get("x-forwarded-proto") ?? "https";
   const metadataBase = new URL(`${protocol}://${host}`);
-  const title = "Listen6 | Build Your Paid Listening Business";
+  const title = "The Paid Listening Starter Guide | Listen6";
   const description =
-    "Learn the skill, find clients, and build your own paid listening business.";
+    "A short starter guide to understand, learn, and begin a paid listening service.";
 
   return {
     metadataBase,
