@@ -18,7 +18,7 @@ const questions = [
       "As a listener, your role is to help create that space — to listen carefully, ask the right questions, respond with empathy, and help the conversation continue naturally.",
     ],
     closing:
-      "The guide shows you how the whole process fits together, from understanding the service to taking your first steps as a beginner.",
+      "The blueprint shows you how the whole process fits together, from understanding the service to taking your first steps as a beginner.",
   },
   {
     question: "But What Would I Actually Say?",
@@ -34,7 +34,7 @@ const questions = [
     ],
     paragraphs: [
       "These are learnable skills.",
-      "The guide teaches you how to listen actively, ask better questions, respond with empathy, handle silence, keep a conversation moving naturally, and know where your boundaries should be.",
+      "The blueprint teaches you how to listen actively, ask better questions, respond with empathy, handle silence, keep a conversation moving naturally, and know where your boundaries should be.",
     ],
     closing:
       "You’ll also see practical examples of what to say, what not to say, and how a good listening conversation actually feels.",
@@ -128,7 +128,7 @@ export default function Home() {
           <p className="eyebrow">LAUNCH PRE-ORDER</p>
           <h2>The Paid Listening<br />Blueprint.</h2>
           <p className="purchase-copy">
-            A practical beginner guide designed to take you from “I just discovered paid listening” to “I know what to do next.”
+            A practical beginner blueprint designed to take you from “I just discovered paid listening” to “I know what to do next.”
           </p>
 
           <ul className="purchase-includes" aria-label="What the guide includes">
