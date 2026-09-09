@@ -81,9 +81,6 @@ export default function Home() {
           <p className="market-copy">
             The social connection services market is projected to reach $27.5 billion by 2036 — growing at 33.8% a year.
           </p>
-          <p className="market-copy market-copy-secondary">
-            People are paying for a private, judgment-free space where they can talk, feel heard, and connect with another person.
-          </p>
           <a className="market-next" href="#guide">
             So how does paid listening actually work — and how can a complete beginner get started? <span aria-hidden="true">↓</span>
           </a>
