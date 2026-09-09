@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { purchaseUrl } from "./config";
 
 export const metadata: Metadata = {
-  title: "The Paid Listening Starter Guide | Listen6",
+  title: "The Paid Listening Blueprint | Listen6",
   description:
     "A beginner guide to understanding paid listening, learning the skills, and knowing how to get started.",
 };
