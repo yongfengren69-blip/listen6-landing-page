@@ -89,7 +89,7 @@ export default function Home() {
 
       <section className="guide" id="guide">
         <div className="section-shell guide-heading">
-          <p className="eyebrow">THE PAID LISTENING STARTER GUIDE</p>
+          <p className="eyebrow">The Paid Listening Blueprint</p>
           <h2>You probably have a few questions.</h2>
         </div>
 
@@ -126,7 +126,7 @@ export default function Home() {
       <section className="purchase" id="pre-order">
         <div className="section-shell purchase-inner">
           <p className="eyebrow">LAUNCH PRE-ORDER</p>
-          <h2>The Paid Listening<br />Starter Guide.</h2>
+          <h2>The Paid Listening<br />Blueprint.</h2>
           <p className="purchase-copy">
             A practical beginner guide designed to take you from “I just discovered paid listening” to “I know what to do next.”
           </p>
