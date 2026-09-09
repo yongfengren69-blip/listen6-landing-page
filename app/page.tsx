@@ -68,7 +68,7 @@ export default function Home() {
             <img src="/listen6-logo.png" alt="" />
             <span>LISTEN<span>6</span></span>
           </a>
-          <span className="nav-label">STARTER GUIDE</span>
+          <span className="nav-label">The Paid Listening Blueprint</span>
         </nav>
 
         <div className="market-content section-shell">
