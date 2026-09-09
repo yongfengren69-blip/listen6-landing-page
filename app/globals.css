@@ -31,7 +31,7 @@ h1, h2, h3, p { margin-top: 0; }
 .eyebrow { margin: 0; color: var(--signal); font-size: 11px; font-weight: 900; letter-spacing: 1.8px; }
 .market-stat-row { display: flex; align-items: flex-end; gap: 18px; margin-top: 26px; }
 .market-stat { margin: 0; color: var(--paper); font-size: clamp(92px, 23vw, 236px); font-weight: 900; letter-spacing: -.1em; line-height: .72; }
-.market-stat span { color: var(--signal); font-size: .46em; letter-spacing: -.08em; }
+.market-stat span { margin-left: .08em; color: var(--signal); font-size: .46em; letter-spacing: -.08em; }
 .market-growth { margin: 0 0 5px; color: var(--signal); font-size: clamp(25px, 6vw, 44px); font-weight: 900; letter-spacing: -.07em; line-height: .8; }
 .market-growth span { display: inline-block; margin-top: 8px; color: var(--muted); font-size: 9px; letter-spacing: 1.2px; }
 h1 { max-width: 810px; margin: 42px 0 0; font-size: clamp(42px, 8.5vw, 86px); font-weight: 900; letter-spacing: -.075em; line-height: .89; }
