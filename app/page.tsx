@@ -47,10 +47,10 @@ const questions = [
       "The Paid Listening Blueprint shows you where beginners can look for real opportunities, how to set yourself up, how to present your listening service, and the practical steps you can take toward finding your first paying client.",
     ],
     prompts: [
-      "Where to Look",
-      "Set Yourself Up",
-      "Start Reaching People",
-      "Work Toward Your First Client",
+      "Where Beginners Can Find Real Paid Listening Opportunities",
+      "How to Set Up and Present Your Listening Service",
+      "How to Start Connecting With Potential Clients",
+      "The Practical Steps Toward Finding Your First Paying Client",
     ],
     closing:
       "You’ll know where to begin, what to do next, and how to start putting what you’ve learned into action.",
