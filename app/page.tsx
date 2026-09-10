@@ -42,7 +42,7 @@ const questions = [
   {
     question: "How Do I Find My First Paying Client?",
     intro:
-      "Understanding paid listening is one thing. Actually starting is another.",
+      "Knowing how to listen is only part of the journey. The next question is: where do you actually find people willing to pay for it?",
     paragraphs: [
       "Once you know how the service works and how to handle a real listening conversation, you still need to know what to do next.",
     ],
