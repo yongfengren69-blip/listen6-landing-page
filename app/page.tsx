@@ -133,8 +133,8 @@ export default function Home() {
           <ul className="purchase-includes" aria-label="What the guide includes">
             <li>A clear explanation of how paid listening works</li>
             <li>Real conversation examples and response guidance</li>
-            <li>Step-by-step beginner starting instructions</li>
-            <li>Practical checklists and tools to help you take action</li>
+            <li>Where and how beginners can start</li>
+            <li>Practical steps toward finding your first paying client</li>
           </ul>
 
           <div className="price-row" aria-label="Price">
