@@ -135,6 +135,7 @@ export default function Home() {
             <li>Real conversation examples and response guidance</li>
             <li>Where and how beginners can start</li>
             <li>Practical steps toward finding your first paying client</li>
+            <li>Includes a separate 15-tool Action Toolkit.</li>
           </ul>
 
           <div className="price-row" aria-label="Price">
