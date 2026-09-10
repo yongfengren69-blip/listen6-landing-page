@@ -40,7 +40,7 @@ const questions = [
       "You’ll also see practical examples of what to say, what not to say, and how a good listening conversation actually feels.",
   },
   {
-    question: "Okay… So How Do I Actually Start?",
+    question: "How Do I Find My First Paying Client?",
     intro:
       "Understanding paid listening is one thing. Actually starting is another.",
     paragraphs: [
