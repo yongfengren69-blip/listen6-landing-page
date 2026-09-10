@@ -44,7 +44,7 @@ const questions = [
     intro:
       "Knowing how to listen is only part of the journey. The next question is: where do you actually find people willing to pay for it?",
     paragraphs: [
-      "Once you know how the service works and how to handle a real listening conversation, you still need to know what to do next.",
+      "The Paid Listening Blueprint shows you where beginners can look for real opportunities, how to set yourself up, how to present your listening service, and the practical steps you can take toward finding your first paying client.",
     ],
     prompts: [
       "What should you prepare?",
@@ -54,7 +54,7 @@ const questions = [
       "And what should you do first, second, and third?",
     ],
     closing:
-      "You won’t be left to figure that out on your own. You’ll know what to prepare, where to begin, how to set yourself up, and what to do next — in order. By the end, you won’t just understand paid listening. You’ll know what to do next.",
+      "You’ll know where to begin, what to do next, and how to start putting what you’ve learned into action.",
   },
 ];
 
