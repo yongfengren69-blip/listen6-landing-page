@@ -65,13 +65,22 @@ h1 { max-width: 810px; margin: 42px 0 0; font-size: clamp(42px, 8.5vw, 86px); fo
 .purchase-includes { display: grid; gap: 11px; margin: 34px 0 0; padding: 0; color: var(--paper); font-size: 15px; font-weight: 700; line-height: 1.35; list-style: none; }
 .purchase-includes li { position: relative; padding-left: 21px; }
 .purchase-includes li::before { content: "✓"; position: absolute; left: 0; color: var(--signal); }
+.offer-countdown { display: flex; align-items: end; justify-content: space-between; gap: 20px; margin-top: 42px; padding: 16px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.offer-countdown span { color: var(--muted); font-size: 10px; font-weight: 900; letter-spacing: 1.4px; }
+.offer-countdown strong { color: var(--paper); font-size: clamp(31px, 8vw, 54px); font-variant-numeric: tabular-nums; font-weight: 900; letter-spacing: -.055em; line-height: .8; }
 .price-row { display: flex; align-items: end; justify-content: space-between; gap: 20px; margin-top: 46px; padding: 20px 0 18px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-.price-row span { color: var(--muted); font-size: 10px; font-weight: 900; letter-spacing: 1.4px; }
+.price-row { margin-top: 18px; }
+.price-labels { display: grid; gap: 7px; }
+.price-row span { display: block; color: var(--muted); font-size: 10px; font-weight: 900; letter-spacing: 1.4px; }
+.price-row s { color: var(--paper); text-decoration-color: var(--signal); text-decoration-thickness: 2px; }
 .price-row strong { color: var(--signal); font-size: clamp(48px, 11vw, 80px); font-weight: 900; letter-spacing: -.09em; line-height: .8; }
 .buy-button { display: flex; align-items: center; justify-content: center; min-height: 66px; margin-top: 22px; padding: 18px; background: var(--signal); color: var(--ink); font-size: 16px; font-weight: 900; letter-spacing: -.025em; text-align: center; text-decoration: none; transition: transform .2s ease, box-shadow .2s ease; }
 .buy-button:hover { transform: translateY(-2px); box-shadow: 0 8px 0 rgba(245,241,232,.28); }
 .site-footer { display: flex; flex-direction: column; align-items: flex-start; gap: 26px; margin-top: 96px; padding-top: 22px; border-top: 1px solid var(--line); }
 .site-footer p { max-width: 320px; margin: 0; color: #77736b; font-size: 10px; line-height: 1.45; }
+@media (max-width: 420px) {
+  .offer-countdown, .price-row { align-items: flex-start; flex-direction: column; gap: 14px; }
+}
 @media (min-width: 700px) {
   .site-nav { padding-top: 34px; }
   .market-content { padding-bottom: 115px; }

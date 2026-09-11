@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { purchaseUrl } from "./config";
+import { PersistentOffer } from "./components/PersistentOffer";
 
 export const metadata: Metadata = {
   title: "The Paid Listening Blueprint | Listen6",
@@ -135,12 +136,7 @@ export default function Home() {
             <li>Practical steps toward finding your first paying client</li>
           </ul>
 
-          <div className="price-row" aria-label="Price">
-            <span>ONE-TIME PAYMENT</span>
-            <strong>$39.90</strong>
-          </div>
-
-          <a className="buy-button" href={purchaseUrl}>Get The Paid Listening Blueprint — $39.90</a>
+          <PersistentOffer purchaseUrl={purchaseUrl} />
         </div>
 
         <footer className="site-footer section-shell">
