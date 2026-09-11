@@ -70,9 +70,9 @@ h1 { max-width: 810px; margin: 42px 0 0; font-size: clamp(42px, 8.5vw, 86px); fo
 .offer-countdown strong { color: var(--paper); font-size: clamp(31px, 8vw, 54px); font-variant-numeric: tabular-nums; font-weight: 900; letter-spacing: -.055em; line-height: .8; }
 .price-row { display: flex; align-items: end; justify-content: space-between; gap: 20px; margin-top: 46px; padding: 20px 0 18px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .price-row { margin-top: 18px; }
-.price-labels { display: grid; gap: 7px; }
+.price-labels { display: grid; gap: 10px; }
 .price-row span { display: block; color: var(--muted); font-size: 10px; font-weight: 900; letter-spacing: 1.4px; }
-.price-row s { color: var(--paper); text-decoration-color: var(--signal); text-decoration-thickness: 2px; }
+.price-row s { display: block; margin-top: 7px; color: rgba(245,241,232,.76); font-size: clamp(27px, 7vw, 42px); font-weight: 900; letter-spacing: -.065em; line-height: .82; text-decoration-color: var(--signal); text-decoration-thickness: 3px; }
 .price-row strong { color: var(--signal); font-size: clamp(48px, 11vw, 80px); font-weight: 900; letter-spacing: -.09em; line-height: .8; }
 .buy-button { display: flex; align-items: center; justify-content: center; min-height: 66px; margin-top: 22px; padding: 18px; background: var(--signal); color: var(--ink); font-size: 16px; font-weight: 900; letter-spacing: -.025em; text-align: center; text-decoration: none; transition: transform .2s ease, box-shadow .2s ease; }
 .buy-button:hover { transform: translateY(-2px); box-shadow: 0 8px 0 rgba(245,241,232,.28); }
