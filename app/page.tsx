@@ -29,12 +29,11 @@ const questions = [
       "How do you help them keep talking?",
       "What questions should you ask?",
       "What if they suddenly go quiet?",
-      "What if they become emotional?",
       "What if you simply have no idea what to say?",
     ],
     paragraphs: [
       "These are learnable skills.",
-      "The blueprint teaches you how to listen actively, ask better questions, respond with empathy, handle silence, keep a conversation moving naturally, and know where your boundaries should be.",
+      "The blueprint teaches you how to listen actively, ask better questions, respond with empathy, give the client space, keep a conversation moving naturally, and know where your boundaries should be.",
     ],
     closing:
       "You’ll also see practical examples of what to say, what not to say, and how a good listening conversation actually feels.",
@@ -124,7 +123,6 @@ export default function Home() {
 
       <section className="purchase" id="pre-order">
         <div className="section-shell purchase-inner">
-          <p className="eyebrow">LAUNCH PRE-ORDER</p>
           <h2>The Paid Listening<br />Blueprint.</h2>
           <p className="purchase-copy">
             A practical beginner blueprint designed to take you from “I just discovered paid listening” to “I know what to do next.”
@@ -135,7 +133,6 @@ export default function Home() {
             <li>Real conversation examples and response guidance</li>
             <li>Where and how beginners can start</li>
             <li>Practical steps toward finding your first paying client</li>
-            <li>Includes a separate 15-tool Action Toolkit.</li>
           </ul>
 
           <div className="price-row" aria-label="Price">
@@ -143,9 +140,7 @@ export default function Home() {
             <strong>$39.90</strong>
           </div>
 
-          <a className="buy-button" href={purchaseUrl}>Pre-Order Now — $39.90</a>
-          {/* TODO: Before publishing, add the confirmed delivery date here:
-              This is a pre-order. Your complete digital guide will be delivered by email on [actual date]. */}
+          <a className="buy-button" href={purchaseUrl}>Get The Paid Listening Blueprint — $39.90</a>
         </div>
 
         <footer className="site-footer section-shell">
