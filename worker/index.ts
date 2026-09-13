@@ -2,6 +2,8 @@
 import { handleImageOptimization, DEFAULT_DEVICE_SIZES, DEFAULT_IMAGE_SIZES } from "vinext/server/image-optimization";
 import handler from "vinext/server/app-router-entry";
 
+const HOME_VERSION = "2026-09-13-v2";
+
 interface Env {
   ASSETS: Fetcher;
   DB: D1Database;
@@ -40,7 +42,22 @@ const worker = {
       }, allowedWidths);
     }
 
-    return handler.fetch(request, env, ctx);
+    const response = await handler.fetch(request, env, ctx);
+
+    if (url.pathname !== "/" || !response.headers.get("content-type")?.includes("text/html")) {
+      return response;
+    }
+
+    const headers = new Headers(response.headers);
+    headers.set("X-Listen6-Home-Version", HOME_VERSION);
+
+    const html = await response.text();
+    const versionMarker = `<!-- listen6-home-version: ${HOME_VERSION} -->`;
+    const markedHtml = html.includes("</body>")
+      ? html.replace("</body>", `${versionMarker}</body>`)
+      : `${html}${versionMarker}`;
+
+    return new Response(markedHtml, { status: response.status, statusText: response.statusText, headers });
   },
 };
 
