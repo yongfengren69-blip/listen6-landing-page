@@ -1,61 +1,52 @@
 import type { Metadata } from "next";
-import { purchaseUrl } from "./config";
 import { PersistentOffer } from "./components/PersistentOffer";
+import { purchaseUrl } from "./config";
 
 export const metadata: Metadata = {
   title: "The Paid Listening Blueprint | Listen6",
   description:
-    "A beginner guide to understanding paid listening, learning the skills, and knowing how to get started.",
+    "A beginner-friendly guide to understanding paid listening and exploring your first steps.",
 };
 
-const questions = [
-  {
-    question: "How Does Paid Listening Actually Work?",
-    intro:
-      "Why would someone pay another person just to listen? What are they really paying for? And where does the listener fit into all of this?",
-    paragraphs: [
-      "Paid listening is more than simply staying quiet while someone talks. People may be looking for a private, judgment-free space to talk about loneliness, relationships, stress, work, family, or everyday life.",
-      "Paid listening turns that need into a service: a listener offers their time, attention, and conversation skills to people who are willing to pay for that experience.",
-      "As a listener, your role is to help create that space — to listen carefully, ask the right questions, respond with empathy, and help the conversation continue naturally.",
-    ],
-    closing:
-      "The blueprint shows you how the whole process fits together, from understanding the service to taking your first steps as a beginner.",
-  },
-  {
-    question: "But What Would I Actually Say?",
-    intro:
-      "Someone starts telling you about their marriage, loneliness, stress, family problems, or something they have never felt comfortable saying out loud.",
-    prompts: [
-      "What do you say next?",
-      "How do you help them keep talking?",
-      "What questions should you ask?",
-      "What if they suddenly go quiet?",
-      "What if you simply have no idea what to say?",
-    ],
-    paragraphs: [
-      "These are learnable skills.",
-      "The blueprint teaches you how to listen actively, ask better questions, respond with empathy, give the client space, keep a conversation moving naturally, and know where your boundaries should be.",
-    ],
-    closing:
-      "You’ll also see practical examples of what to say, what not to say, and how a good listening conversation actually feels.",
-  },
-  {
-    question: "How Do I Find My First Paying Client?",
-    intro:
-      "Knowing how to listen is only part of the journey. The next question is: where do you actually find people willing to pay for it?",
-    paragraphs: [
-      "The Paid Listening Blueprint shows you where beginners can look for real opportunities, how to set yourself up, how to present your listening service, and the practical steps you can take toward finding your first paying client.",
-    ],
-    prompts: [
-      "Where Beginners Can Find Real Paid Listening Opportunities",
-      "How to Set Up and Present Your Listening Service",
-      "How to Start Connecting With Potential Clients",
-      "The Practical Steps Toward Finding Your First Paying Client",
-    ],
-    closing:
-      "You’ll know where to begin, what to do next, and how to start putting what you’ve learned into action.",
-  },
+const advantages = [
+  "Beginner Friendly",
+  "No Special Degree Required",
+  "No Complicated Technology",
+  "Can Be Explored Online",
+  "Built Around a Skill You Already Understand",
+  "A Flexible Way to Explore Extra Income",
 ];
+
+const listeningSkills = [
+  "Keep a conversation moving naturally",
+  "Give someone space when they go quiet",
+  "Respond with empathy instead of advice",
+  "Handle emotional expression with more confidence",
+  "Help people feel genuinely heard",
+];
+
+const clientSteps = [
+  "Where beginners can look for paid listening opportunities",
+  "How to present your listening service clearly",
+  "How to start connecting with potential clients",
+  "What first steps are worth taking",
+  "How to explore getting a first paying client",
+];
+
+const guideOutcomes = [
+  "What paid listening actually is",
+  "Why people pay for listening",
+  "What beginners need to start",
+  "How listening conversations work",
+  "Where beginners can explore opportunities",
+  "How to present yourself",
+  "What first steps to take",
+  "What common beginner mistakes to avoid",
+];
+
+function PurchaseLink({ children, className = "offer-link" }: { children: React.ReactNode; className?: string }) {
+  return <a className={className} href={purchaseUrl}>{children}</a>;
+}
 
 export default function Home() {
   return (
@@ -67,75 +58,137 @@ export default function Home() {
             <img src="/listen6-logo.png" alt="" />
             <span>LISTEN<span>6</span></span>
           </a>
-          <span className="nav-label">The Paid Listening Blueprint</span>
+          <span className="nav-label">THE PAID LISTENING BLUEPRINT</span>
         </nav>
 
         <div className="market-content section-shell">
-          <p className="eyebrow">THE SOCIAL CONNECTION SERVICES MARKET</p>
-          <div className="market-stat-row">
-            <p className="market-stat">$27.5<span>B</span></p>
-            <p className="market-growth">33.8%<br /><span>ANNUAL GROWTH</span></p>
-          </div>
-          <h1>People are turning one of the most ordinary human skills — listening — into a paid service.</h1>
+          <p className="eyebrow">A BEGINNER-FRIENDLY WAY TO EXPLORE PAID LISTENING</p>
+          <h1>People Are Getting Paid to Listen.<br />Now Learn How You Can Get Started.</h1>
           <p className="market-copy">
-            The social connection services market is projected to reach $27.5 billion by 2036 — growing at 33.8% a year.
+            A simple guide to understanding paid listening, where opportunities exist, and what your first steps can look like.
           </p>
-          <a className="market-next" href="#guide">
-            So how does paid listening actually work — and how can a complete beginner get started? <span aria-hidden="true">↓</span>
-          </a>
-        </div>
-      </section>
-
-      <section className="guide" id="guide">
-        <div className="section-shell guide-heading">
-          <p className="eyebrow">The Paid Listening Blueprint</p>
-          <h2>You probably have a few questions.</h2>
-        </div>
-
-        <div className="section-shell question-list">
-          {questions.map((item, index) => (
-            <article className="question-card" key={item.question}>
-              <span className="question-number">0{index + 1}</span>
-              <h3>{item.question}</h3>
-              <div className="question-body">
-                <p className="question-intro">{item.intro}</p>
-                {item.question === "But What Would I Actually Say?" && item.prompts && (
-                  <ul className="question-prompts">
-                    {item.prompts.map((prompt) => <li key={prompt}>{prompt}</li>)}
-                  </ul>
-                )}
-                {item.paragraphs?.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
-                {item.question !== "But What Would I Actually Say?" && item.prompts && (
-                  <ul className="question-prompts">
-                    {item.prompts.map((prompt) => <li key={prompt}>{prompt}</li>)}
-                  </ul>
-                )}
-                <p className="question-closing">{item.closing}</p>
-              </div>
-            </article>
-          ))}
-        </div>
-
-        <div className="section-shell guide-summary">
-          <strong>You Don’t Have to Figure All of This Out by Yourself.</strong>
-          <p>We’ve put the entire beginner path in one place — how paid listening works, how to handle real conversations, and how to take your first step.</p>
-        </div>
-      </section>
-
-      <section className="purchase" id="pre-order">
-        <div className="section-shell purchase-inner">
-          <h2>The Paid Listening<br />Blueprint.</h2>
-          <p className="purchase-copy">
-            A practical beginner blueprint designed to take you from “I just discovered paid listening” to “I know what to do next.”
-          </p>
-
-          <ul className="purchase-includes" aria-label="What the guide includes">
-            <li>A clear explanation of how paid listening works</li>
-            <li>Real conversation examples and response guidance</li>
-            <li>Where and how beginners can start</li>
-            <li>Practical steps toward finding your first paying client</li>
+          <ul className="hero-points" aria-label="Guide benefits">
+            <li>Beginner-friendly</li>
+            <li>No special degree required</li>
+            <li>No complicated technology</li>
+            <li>Learn where opportunities exist</li>
+            <li>Learn the first steps</li>
           </ul>
+          <PurchaseLink className="offer-link hero-cta">Get Instant Access — $19.90</PurchaseLink>
+          <p className="offer-note hero-note">One-time payment · Instant access</p>
+        </div>
+      </section>
 
+      <section className="advantages section-light" id="advantages">
+        <div className="section-shell">
+          <p className="eyebrow">THE OPPORTUNITY</p>
+          <h2>Why Paid Listening Is Getting So Much Attention</h2>
+          <p className="section-lead">
+            It is a different kind of opportunity: simple to understand, human at its core, and worth exploring before you decide whether it is right for you.
+          </p>
+          <div className="advantage-grid">
+            {advantages.map((advantage, index) => (
+              <article className="advantage-card" key={advantage}>
+                <span>0{index + 1}</span>
+                <strong>{advantage}</strong>
+              </article>
+            ))}
+          </div>
+          <p className="foundation-copy">
+            If people already come to you when they need someone to talk to, you may already understand the foundation of paid listening.
+          </p>
+          <PurchaseLink>Show Me How to Start — $19.90</PurchaseLink>
+        </div>
+      </section>
+
+      <section className="skill-section" id="listening-skills">
+        <div className="section-shell split-layout">
+          <div>
+            <p className="eyebrow">THE SKILL YOU ALREADY UNDERSTAND</p>
+            <h2>You Already Know How to Listen.<br />Now Learn How to Do It Better.</h2>
+          </div>
+          <div className="skill-copy">
+            <p>You do not need to be an expert to start learning. Listening is already a human skill you understand; this guide gives it simple methods and a clearer structure.</p>
+            <ul className="check-list">
+              {listeningSkills.map((skill) => <li key={skill}>{skill}</li>)}
+            </ul>
+            <p className="skill-close">You are not starting from zero. You are learning a better way to use a skill you already have.</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="proof-section section-light" id="how-it-works">
+        <div className="section-shell split-layout">
+          <div>
+            <p className="eyebrow">THE SERVICE IS REAL</p>
+            <h2>How Does Paid Listening Actually Work?</h2>
+          </div>
+          <div className="proof-copy">
+            <p>Some people want a private, judgment-free space to talk about loneliness, relationships, stress, work, family, or everyday life.</p>
+            <p>They are not always looking for advice. Often, they want attention, conversation, and someone who can help them feel heard.</p>
+            <p>That is why paid listening exists as a real online service people are willing to explore and pay for.</p>
+          </div>
+        </div>
+        <div className="section-shell market-proof">
+          <div>
+            <strong>$27.5<span>B</span></strong>
+            <p>Projected social connection services market by 2036.</p>
+          </div>
+          <div>
+            <strong>33.8%</strong>
+            <p>Projected annual market growth.</p>
+          </div>
+          <p className="proof-note">The point is not to overwhelm you with numbers. It is to show that human connection is a real and growing area of demand.</p>
+        </div>
+      </section>
+
+      <section className="client-section" id="first-client">
+        <div className="section-shell client-inner">
+          <p className="eyebrow">THE PART MOST BEGINNERS WANT TO KNOW</p>
+          <h2>How Do I Find My First Paying Client?</h2>
+          <p className="section-lead">The guide does more than explain the idea. It helps you understand where to look, how to show up, and how to take practical first steps.</p>
+          <div className="client-step-grid">
+            {clientSteps.map((step, index) => (
+              <div className="client-step" key={step}>
+                <span>0{index + 1}</span>
+                <p>{step}</p>
+              </div>
+            ))}
+          </div>
+          <p className="client-close">You will not be left with a vague idea. You will have a clearer direction for what to explore next.</p>
+          <PurchaseLink>Get the Complete Starter Guide — $19.90</PurchaseLink>
+        </div>
+      </section>
+
+      <section className="outcomes-section section-light" id="what-youll-know">
+        <div className="section-shell">
+          <p className="eyebrow">THE ANSWERS YOU ARE LOOKING FOR</p>
+          <h2>What You’ll Know After Going Through the Guide</h2>
+          <p className="section-lead">For $19.90, the questions that brought you here become a much clearer path to explore.</p>
+          <div className="outcome-grid">
+            {guideOutcomes.map((outcome, index) => (
+              <div className="outcome-item" key={outcome}>
+                <span>{String(index + 1).padStart(2, "0")}</span>
+                <p>{outcome}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="decision-section">
+        <div className="section-shell decision-inner">
+          <p className="eyebrow">A SMALL DECISION, NOT A LIFE DECISION</p>
+          <h2>You Don’t Need to Choose a New Career Today.</h2>
+          <p>You do not need to decide today whether paid listening is your future. Just learn how it works, see where beginners can start, and decide for yourself whether it is worth exploring.</p>
+        </div>
+      </section>
+
+      <section className="purchase" id="purchase">
+        <div className="section-shell purchase-inner">
+          <p className="eyebrow">THE PAID LISTENING BLUEPRINT</p>
+          <h2>Get Clear on How to Start.</h2>
+          <p className="purchase-copy">Understand the opportunity, learn the first steps, and see whether paid listening is worth exploring for you.</p>
           <PersistentOffer purchaseUrl={purchaseUrl} />
         </div>
 

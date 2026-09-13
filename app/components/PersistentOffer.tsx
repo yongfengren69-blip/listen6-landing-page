@@ -18,9 +18,7 @@ type CountdownState = {
 };
 
 const isCountdownState = (value: unknown): value is CountdownState => {
-  if (!value || typeof value !== "object") {
-    return false;
-  }
+  if (!value || typeof value !== "object") return false;
 
   const state = value as CountdownState;
   return Number.isFinite(state.firstStartedAt)
@@ -43,9 +41,7 @@ const loadCountdownState = (now: number): CountdownState => {
       saveCountdownState(normalized);
       return normalized;
     }
-  } catch {
-    window.localStorage.removeItem(storageKey);
-  }
+  } catch {}
 
   const initial = createCountdownState(now);
   saveCountdownState(initial);
@@ -57,32 +53,19 @@ export function PersistentOffer({ purchaseUrl }: { purchaseUrl: string }) {
   const [now, setNow] = useState<number | null>(null);
 
   useEffect(() => {
-    const start = () => {
-      const currentTime = Date.now();
-      const state = loadCountdownState(currentTime);
-      setCountdown(state);
-      setNow(currentTime);
-    };
-
-    const tick = () => {
+    const sync = () => {
       const currentTime = Date.now();
       setCountdown((current) => {
-        if (!current) {
-          return current;
-        }
-
-        const normalized = normalizeCountdownState(current, currentTime);
-        if (normalized !== current) {
-          saveCountdownState(normalized);
-        }
+        const state = current ?? loadCountdownState(currentTime);
+        const normalized = normalizeCountdownState(state, currentTime);
+        if (normalized !== state || !current) saveCountdownState(normalized);
         return normalized;
       });
       setNow(currentTime);
     };
 
-    start();
-    const interval = window.setInterval(tick, 1000);
-
+    sync();
+    const interval = window.setInterval(sync, 1000);
     return () => window.clearInterval(interval);
   }, []);
 
@@ -90,20 +73,22 @@ export function PersistentOffer({ purchaseUrl }: { purchaseUrl: string }) {
     ? getRemainingSeconds(countdown.endsAt, now)
     : INITIAL_DURATION_SECONDS;
 
-  return <>
-    <div className="offer-countdown" aria-live="polite">
+  return <div className="final-offer">
+    <div className="final-price-stack" aria-label="Limited-time price">
       <span>LIMITED-TIME PRICE</span>
+      <div className="final-prices">
+        <p>Original Price <s>$69.90</s></p>
+        <strong>$19.90</strong>
+      </div>
+      <p className="save-copy">Save $50 Today</p>
+    </div>
+
+    <div className="offer-countdown" aria-live="polite">
+      <span>OFFER WINDOW</span>
       <strong>{formatCountdown(secondsRemaining)}</strong>
     </div>
 
-    <div className="price-row" aria-label="Price">
-      <div className="price-labels">
-        <span>ORIGINAL PRICE <s>$99.90</s></span>
-        <span>CURRENT PRICE</span>
-      </div>
-      <strong>$39.90</strong>
-    </div>
-
-    <a className="buy-button" href={purchaseUrl}>Get The Paid Listening Blueprint — $39.90</a>
-  </>;
+    <a className="buy-button" href={purchaseUrl}>Get Instant Access — $19.90</a>
+    <p className="offer-note">One-time payment · Instant access · No subscription</p>
+  </div>;
 }
