@@ -32,7 +32,7 @@ h1, h2, h3, p { margin-top: 0; }
 .market-copy { max-width: 590px; margin: 24px 0 0; color: var(--muted); font-size: 17px; line-height: 1.48; }
 .check-list li::before { position: absolute; left: 0; color: var(--signal); content: "✓"; }
 
-.offer-link, .buy-button { display: flex; align-items: center; justify-content: center; min-height: 64px; margin-top: 28px; padding: 17px 20px; background: var(--signal); color: var(--ink); font-size: 16px; font-weight: 900; letter-spacing: -.025em; text-align: center; text-decoration: none; transition: transform .2s ease, box-shadow .2s ease; }
+.offer-link, .buy-button { display: flex; align-items: center; justify-content: center; min-height: 64px; margin-top: 28px; padding: 17px 20px; background: linear-gradient(115deg, var(--signal) 0%, var(--signal) 42%, #fff0a2 50%, var(--signal) 58%, var(--signal) 100%); background-size: 240% 100%; color: var(--ink); font-size: 16px; font-weight: 900; letter-spacing: -.025em; text-align: center; text-decoration: none; transition: transform .2s ease, box-shadow .2s ease; animation: button-sheen 5.5s ease-in-out infinite; }
 .offer-link:hover, .buy-button:hover { transform: translateY(-2px); box-shadow: 0 8px 0 rgba(245,241,232,.28); }
 .hero-cta { max-width: 420px; }
 .offer-note { margin: 10px 0 0; color: var(--muted); font-size: 11px; font-weight: 700; letter-spacing: .3px; text-align: center; }
@@ -86,6 +86,15 @@ h2 { max-width: 790px; margin: 18px 0 0; font-size: clamp(40px, 9.5vw, 82px); }
 .final-offer .buy-button { margin-top: 20px; }
 .site-footer { display: flex; flex-direction: column; align-items: flex-start; gap: 26px; margin-top: 96px; padding-top: 22px; border-top: 1px solid var(--line); }
 .site-footer p { max-width: 320px; margin: 0; color: #77736b; font-size: 10px; line-height: 1.45; }
+
+@keyframes button-sheen {
+  0%, 72%, 100% { background-position: 120% 0; }
+  88% { background-position: -20% 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .offer-link, .buy-button { animation: none; }
+}
 
 @media (max-width: 420px) {
   .nav-label { max-width: 160px; }
