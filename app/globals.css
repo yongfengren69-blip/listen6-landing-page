@@ -58,6 +58,7 @@ h2 { max-width: 790px; margin: 18px 0 0; font-size: clamp(40px, 9.5vw, 82px); }
 .skill-close { color: var(--paper); font-weight: 800; }
 
 .proof-section { padding: 76px 0; }
+.proof-section .split-layout { grid-template-columns: 1fr; gap: 30px; }
 .proof-copy { color: #615e57; }
 
 .client-section { padding: 76px 0; }
@@ -97,6 +98,7 @@ h2 { max-width: 790px; margin: 18px 0 0; font-size: clamp(40px, 9.5vw, 82px); }
   .advantages, .skill-section, .proof-section, .client-section, .purchase { padding-top: 124px; }
   .advantage-grid { grid-template-columns: repeat(3, 1fr); }
   .split-layout { grid-template-columns: minmax(300px, .95fr) minmax(330px, 1.05fr); column-gap: 72px; }
+  .proof-section .split-layout { grid-template-columns: 1fr; gap: 30px; }
   .client-step-grid { grid-template-columns: repeat(2, 1fr); }
   .client-step:last-child { grid-column: 1 / -1; }
   .site-footer { flex-direction: row; align-items: center; justify-content: space-between; }
