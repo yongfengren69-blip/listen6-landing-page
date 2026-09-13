@@ -33,17 +33,6 @@ const clientSteps = [
   "How to explore getting a first paying client",
 ];
 
-const guideOutcomes = [
-  "What paid listening actually is",
-  "Why people pay for listening",
-  "What beginners need to start",
-  "How listening conversations work",
-  "Where beginners can explore opportunities",
-  "How to present yourself",
-  "What first steps to take",
-  "What common beginner mistakes to avoid",
-];
-
 function PurchaseLink({ children, className = "offer-link" }: { children: React.ReactNode; className?: string }) {
   return <a className={className} href={purchaseUrl}>{children}</a>;
 }
@@ -67,13 +56,6 @@ export default function Home() {
           <p className="market-copy">
             A simple guide to understanding paid listening, where opportunities exist, and what your first steps can look like.
           </p>
-          <ul className="hero-points" aria-label="Guide benefits">
-            <li>Beginner-friendly</li>
-            <li>No special degree required</li>
-            <li>No complicated technology</li>
-            <li>Learn where opportunities exist</li>
-            <li>Learn the first steps</li>
-          </ul>
           <PurchaseLink className="offer-link hero-cta">Get Instant Access — $19.90</PurchaseLink>
           <p className="offer-note hero-note">One-time payment · Instant access</p>
         </div>
@@ -94,9 +76,6 @@ export default function Home() {
               </article>
             ))}
           </div>
-          <p className="foundation-copy">
-            If people already come to you when they need someone to talk to, you may already understand the foundation of paid listening.
-          </p>
           <PurchaseLink>Show Me How to Start — $19.90</PurchaseLink>
         </div>
       </section>
@@ -124,21 +103,9 @@ export default function Home() {
             <h2>How Does Paid Listening Actually Work?</h2>
           </div>
           <div className="proof-copy">
-            <p>Some people want a private, judgment-free space to talk about loneliness, relationships, stress, work, family, or everyday life.</p>
-            <p>They are not always looking for advice. Often, they want attention, conversation, and someone who can help them feel heard.</p>
-            <p>That is why paid listening exists as a real online service people are willing to explore and pay for.</p>
+            <p>Some people are not looking for advice. They want attention, conversation, and someone who can help them feel heard.</p>
+            <p>That is why paid listening exists as a real online service.</p>
           </div>
-        </div>
-        <div className="section-shell market-proof">
-          <div>
-            <strong>$27.5<span>B</span></strong>
-            <p>Projected social connection services market by 2036.</p>
-          </div>
-          <div>
-            <strong>33.8%</strong>
-            <p>Projected annual market growth.</p>
-          </div>
-          <p className="proof-note">The point is not to overwhelm you with numbers. It is to show that human connection is a real and growing area of demand.</p>
         </div>
       </section>
 
@@ -160,35 +127,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="outcomes-section section-light" id="what-youll-know">
-        <div className="section-shell">
-          <p className="eyebrow">THE ANSWERS YOU ARE LOOKING FOR</p>
-          <h2>What You’ll Know After Going Through the Guide</h2>
-          <p className="section-lead">For $19.90, the questions that brought you here become a much clearer path to explore.</p>
-          <div className="outcome-grid">
-            {guideOutcomes.map((outcome, index) => (
-              <div className="outcome-item" key={outcome}>
-                <span>{String(index + 1).padStart(2, "0")}</span>
-                <p>{outcome}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="decision-section">
-        <div className="section-shell decision-inner">
-          <p className="eyebrow">A SMALL DECISION, NOT A LIFE DECISION</p>
-          <h2>You Don’t Need to Choose a New Career Today.</h2>
-          <p>You do not need to decide today whether paid listening is your future. Just learn how it works, see where beginners can start, and decide for yourself whether it is worth exploring.</p>
-        </div>
-      </section>
-
       <section className="purchase" id="purchase">
         <div className="section-shell purchase-inner">
           <p className="eyebrow">THE PAID LISTENING BLUEPRINT</p>
           <h2>Get Clear on How to Start.</h2>
-          <p className="purchase-copy">Understand the opportunity, learn the first steps, and see whether paid listening is worth exploring for you.</p>
           <PersistentOffer purchaseUrl={purchaseUrl} />
         </div>
 
