@@ -65,9 +65,6 @@ export default function Home() {
         <div className="section-shell">
           <p className="eyebrow">THE OPPORTUNITY</p>
           <h2>Why Paid Listening Is Getting So Much Attention</h2>
-          <p className="section-lead">
-            It is a different kind of opportunity: simple to understand, human at its core, and worth exploring before you decide whether it is right for you.
-          </p>
           <div className="advantage-grid">
             {advantages.map((advantage, index) => (
               <article className="advantage-card" key={advantage}>
@@ -113,7 +110,6 @@ export default function Home() {
         <div className="section-shell client-inner">
           <p className="eyebrow">THE PART MOST BEGINNERS WANT TO KNOW</p>
           <h2>How Do I Find My First Paying Client?</h2>
-          <p className="section-lead">The guide does more than explain the idea. It helps you understand where to look, how to show up, and how to take practical first steps.</p>
           <div className="client-step-grid">
             {clientSteps.map((step, index) => (
               <div className="client-step" key={step}>

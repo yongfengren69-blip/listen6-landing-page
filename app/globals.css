@@ -42,6 +42,7 @@ h1, h2, h3, p { margin-top: 0; }
 h2 { max-width: 790px; margin: 18px 0 0; font-size: clamp(40px, 9.5vw, 82px); }
 .section-lead { max-width: 650px; margin: 22px 0 0; color: #615e57; font-size: 17px; line-height: 1.5; }
 .advantage-grid { display: grid; gap: 12px; margin-top: 34px; }
+.advantages h2 + .advantage-grid { margin-top: 42px; }
 .advantage-card { min-height: 112px; padding: 18px; border: 1px solid var(--light-line); background: rgba(255,255,255,.34); }
 .advantage-card span, .client-step span { color: #9d8512; font-size: 11px; font-weight: 900; letter-spacing: 1px; }
 .advantage-card strong { display: block; max-width: 220px; margin-top: 23px; font-size: 20px; letter-spacing: -.04em; line-height: 1; }
@@ -62,6 +63,7 @@ h2 { max-width: 790px; margin: 18px 0 0; font-size: clamp(40px, 9.5vw, 82px); }
 .client-section { padding: 76px 0; }
 .client-inner .section-lead { color: var(--muted); }
 .client-step-grid { display: grid; gap: 1px; margin-top: 34px; background: var(--line); border: 1px solid var(--line); }
+.client-inner h2 + .client-step-grid { margin-top: 42px; }
 .client-step { min-height: 106px; padding: 18px; background: var(--ink); }
 .client-step p { max-width: 320px; margin: 19px 0 0; color: var(--paper); font-size: 19px; font-weight: 800; letter-spacing: -.04em; line-height: 1.05; }
 .client-close { max-width: 650px; margin: 28px 0 0; color: var(--paper); font-size: 18px; font-weight: 800; letter-spacing: -.035em; line-height: 1.3; }
