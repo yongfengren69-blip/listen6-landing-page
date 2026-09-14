@@ -8,6 +8,7 @@ import {
   getRemainingSeconds,
   normalizeCountdownState,
 } from "../offer-countdown.mjs";
+import { trackPurchaseClick } from "../analytics";
 
 const storageKey = "listen6-paid-listening-offer-v1";
 
@@ -88,7 +89,7 @@ export function PersistentOffer({ purchaseUrl }: { purchaseUrl: string }) {
       <strong>{formatCountdown(secondsRemaining)}</strong>
     </div>
 
-    <a className="buy-button" href={purchaseUrl}>Get Instant Access — $19.90</a>
+    <a className="buy-button" href={purchaseUrl} onClick={() => trackPurchaseClick("buy_click_final", "final")}>Get Instant Access — $19.90</a>
     <p className="offer-note">One-time payment · Instant access · No subscription</p>
   </div>;
 }

@@ -1,6 +1,14 @@
 import type { Metadata } from "next";
 import { headers } from "next/headers";
+import { GA_MEASUREMENT_ID } from "./analytics";
 import "./globals.css";
+
+const gaInitialization = `window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+window.gtag = window.gtag || gtag;
+window.__listen6Ga4Configured = true;
+gtag('js', new Date());
+gtag('config', '${GA_MEASUREMENT_ID}');`;
 
 export async function generateMetadata(): Promise<Metadata> {
   const requestHeaders = await headers();
@@ -41,6 +49,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`} />
+        <script dangerouslySetInnerHTML={{ __html: gaInitialization }} />
+      </head>
       <body>{children}</body>
     </html>
   );

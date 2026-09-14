@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import { AnalyticsTracker } from "./components/AnalyticsTracker";
 import { PersistentOffer } from "./components/PersistentOffer";
+import { TrackedPurchaseLink } from "./components/TrackedPurchaseLink";
 import { purchaseUrl } from "./config";
 
 export const metadata: Metadata = {
@@ -33,13 +35,10 @@ const clientSteps = [
   "How to explore getting a first paying client",
 ];
 
-function PurchaseLink({ children, className = "offer-link" }: { children: React.ReactNode; className?: string }) {
-  return <a className={className} href={purchaseUrl}>{children}</a>;
-}
-
 export default function Home() {
   return (
     <main>
+      <AnalyticsTracker />
       <section className="market" id="top">
         <div className="market-grid" aria-hidden="true" />
         <nav className="site-nav section-shell" aria-label="Listen6">
@@ -56,7 +55,7 @@ export default function Home() {
           <p className="market-copy">
             A simple guide to understanding paid listening, where opportunities exist, and what your first steps can look like.
           </p>
-          <PurchaseLink className="offer-link hero-cta">Get Instant Access — $19.90</PurchaseLink>
+          <TrackedPurchaseLink className="offer-link hero-cta" eventName="buy_click_hero" buttonPosition="hero" purchaseUrl={purchaseUrl}>Get Instant Access — $19.90</TrackedPurchaseLink>
           <p className="offer-note hero-note">One-time payment · Instant access</p>
         </div>
       </section>
@@ -73,7 +72,7 @@ export default function Home() {
               </article>
             ))}
           </div>
-          <PurchaseLink>Show Me How to Start — $19.90</PurchaseLink>
+          <TrackedPurchaseLink eventName="buy_click_opportunity" buttonPosition="opportunity" purchaseUrl={purchaseUrl}>Show Me How to Start — $19.90</TrackedPurchaseLink>
         </div>
       </section>
 
@@ -119,7 +118,7 @@ export default function Home() {
             ))}
           </div>
           <p className="client-close">You will not be left with a vague idea. You will have a clearer direction for what to explore next.</p>
-          <PurchaseLink>Get the Complete Starter Guide — $19.90</PurchaseLink>
+          <TrackedPurchaseLink eventName="buy_click_first_client" buttonPosition="first_client" purchaseUrl={purchaseUrl}>Get the Complete Starter Guide — $19.90</TrackedPurchaseLink>
         </div>
       </section>
 
