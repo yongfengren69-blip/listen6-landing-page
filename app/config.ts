@@ -1,1 +1,1 @@
-export const purchaseUrl = "https://pay.listen6.com/PLACEHOLDER";
+export const purchaseUrl = "https://payhip.com/buy?link=HoSMl";
