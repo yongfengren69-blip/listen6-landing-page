@@ -85,6 +85,7 @@ h2 { max-width: 790px; margin: 18px 0 0; font-size: clamp(40px, 9.5vw, 82px); }
 .offer-countdown strong { color: var(--paper); font-size: clamp(31px, 8vw, 54px); font-variant-numeric: tabular-nums; font-weight: 900; letter-spacing: -.055em; line-height: .8; }
 .final-offer .buy-button { margin-top: 20px; }
 .site-footer { display: flex; flex-direction: column; align-items: flex-start; gap: 26px; margin-top: 96px; padding-top: 22px; border-top: 1px solid var(--line); }
+.footer-copy { display: grid; gap: 6px; }
 .site-footer p { max-width: 320px; margin: 0; color: #77736b; font-size: 10px; line-height: 1.45; }
 
 @keyframes button-sheen {

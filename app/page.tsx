@@ -135,7 +135,10 @@ export default function Home() {
             <img src="/listen6-logo.png" alt="" />
             <span>LISTEN<span>6</span></span>
           </a>
-          <p>Listen6 provides educational content. Results are not guaranteed.</p>
+          <div className="footer-copy">
+            <p>Customer support: <a href="mailto:help@listen6.com">help@listen6.com</a></p>
+            <p>Listen6 provides educational content. Results are not guaranteed.</p>
+          </div>
         </footer>
       </section>
     </main>
