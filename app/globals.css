@@ -87,6 +87,7 @@ h2 { max-width: 790px; margin: 18px 0 0; font-size: clamp(40px, 9.5vw, 82px); }
 .site-footer { display: flex; flex-direction: column; align-items: flex-start; gap: 26px; margin-top: 96px; padding-top: 22px; border-top: 1px solid var(--line); }
 .footer-copy { display: grid; gap: 6px; }
 .site-footer p { max-width: 320px; margin: 0; color: #77736b; font-size: 10px; line-height: 1.45; }
+.site-footer .support-contact { color: var(--paper); font-size: 14px; }
 
 @keyframes button-sheen {
   0%, 72%, 100% { background-position: 120% 0; }

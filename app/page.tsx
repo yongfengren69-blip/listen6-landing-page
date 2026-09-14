@@ -136,7 +136,7 @@ export default function Home() {
             <span>LISTEN<span>6</span></span>
           </a>
           <div className="footer-copy">
-            <p>Customer support: <a href="mailto:help@listen6.com">help@listen6.com</a></p>
+            <p className="support-contact">Customer support: <a href="mailto:help@listen6.com">help@listen6.com</a></p>
             <p>Listen6 provides educational content. Results are not guaranteed.</p>
           </div>
         </footer>
